@@ -450,6 +450,14 @@ public class Field extends JPanel {
                 }
                 //new Thread(player).start();
             }
+            else if(key == KeyEvent.VK_S){
+                try{
+                    bw.close();
+                }
+                catch (Exception ee){
+
+                }
+            }
             else if(key == KeyEvent.VK_L){
                 JFileChooser jfc=new JFileChooser();
                 jfc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES );
@@ -484,12 +492,6 @@ public class Field extends JPanel {
     }
 
     public void restartLevel() {
-        try{
-            bw.close();
-        }
-        catch (Exception e){
-
-        }
         tiles.clear();
         stopall();
         calabash.clear();
